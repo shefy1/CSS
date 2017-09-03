@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>双飞翼布局</title>
+    <style>
+        body{
+            background-color: #c0c0c0;
+        }
+        #hd{
+            height:50px;
+            background: #e4b9c0;
+            text-align: center;
+            border-radius: 7pt;
+            border: white solid;
+            margin:4px;
+            padding:5px;
+        }
+        #middle{
+            float:left;
+            width:100%;/*左栏上去到第一行*/
+            height:500px;
+            background:blue;
+            border-radius: 7pt;
+        }
+        #left{
+            float:left;
+            width:180px;
+            height:500px;
+            margin-left:-100%;
+            background:#0c9;
+            border-bottom-left-radius: 7pt;
+            border-top-left-radius: 7pt;
+            padding-left:5px;
+        }
+        #right{
+            float:left;
+            width:200px;
+            height:500px;
+            margin-left:-200px;
+            background:#0c9;
+            border-bottom-right-radius: 7pt;
+            border-top-right-radius: 7pt;
+            text-align: right;
+        }
+
+        /*给内部div添加margin，把内容放到中间栏，其实整个背景还是100%*/
+        #inside{
+            margin:0 200px 0 180px;
+            height:500px;
+        }
+        #footer{
+            clear:both; /*记得清楚浮动*/
+            height:50px;
+            background: #2aabd2;
+            text-align: center;
+            border-radius: 7pt;
+            border: white solid;
+            margin:4px;
+            padding:5px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="hd">header</div>
+<div id="middle">
+    <div id="inside">&nbsp;middle</div>
+</div>
+<div id="left">left</div>
+<div id="right">right</div>
+<div id="footer">footer</div>
+</body>
+</html>
