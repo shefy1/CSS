@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本的弹性布局示例</title>
+    <style>
+        .flex
+        {
+            /* 基本样式 */
+            width: 350px;
+            height: 200px;
+            border: 1px solid #555;
+            font: 14px Arial;
+
+            /*  建立弹性框 */
+            display: flex;
+        }
+
+        .flex > div
+        {
+            flex: 1 1 auto;
+
+            width: 30px; /* 让过渡表现良好。（从/到"width:auto"的过渡
+                      至少在 Gecko 和 Webkit 上是有 bug 的。
+                      更多信息参见 http://bugzil.la/731886 ） */
+            transition: width 0.7s ease-out;
+        }
+
+        /* colors */
+        .flex > div:nth-child(1){ background : #009246; }
+        .flex > div:nth-child(2){ background : #F1F2F1; }
+        .flex > div:nth-child(3){ background : #CE2B37; }
+
+        .flex > div:hover
+        {
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Flexbox</p>
+    <div class="flex">
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </div>
+</body>
+</html>
