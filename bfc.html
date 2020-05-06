@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .blue, .red-inner {
+        height: 50px;
+        margin: 10px 0;
+    }
+    .blue {
+        background: blue
+    }
+    .red-outer {
+        overflow: hidden;
+        background: red
+    }
+    span {
+        float: left;
+        background: red
+    }
+    /* 形成了bfc的区域不会与float box重叠 */
+    /* 实现左图右文之类的效果 */
+    p {
+        overflow: hidden;
+        background: blue
+    }
+
+    /* 计算BFC高度的时候，浮动元素也参与计算 */
+    /* 解决浮动元素造成父元素高度塌陷的问题 */
+    .parent {
+        overflow: hidden;
+        background: yellow;
+    }
+    .float {
+        float: left;
+        background: green;
+    }
+</style>
+<body>
+    <div class="blue"></div>
+    <div class="red-outer">
+        <div class="red-inner">red inner</div>
+    </div>
+
+    <span>test</span>
+    <p>我是超长的文字</p>
+
+    <div class="parent">
+        <div class="float">浮动元素</div>
+    </div>
+
+</body>
+</html>
