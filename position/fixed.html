@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .box {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            color: white;
+            margin: 10px;
+        }
+
+        #one {
+            position: fixed;
+            top: 80px;
+            left: 10px;
+        }
+        .outer {
+            width: 200px;
+            height: 300px;
+            overflow: scroll;
+            background-color: green;
+            margin-left: 150px;
+            flex: 1;
+        }
+        .bottom {
+            position: fixed;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="outer">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
+        Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+        Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
+        Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
+        Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
+        Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
+        Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
+        Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet mi.
+        Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor tortor.
+        Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
+        Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
+            </p>
+        </div>
+        <div class="box" id="one">
+            One
+        </div>
+        <div class="bottom">
+            <p>
+                固定定位与绝对定位相似，但元素的包含块为<b>viewport 视口</b>。该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。在下面的示例中，"One" 元素定位在离页面顶部 80px，离页面左侧 20px 的位置。
+            </p>
+        </div>
+    </div>
+</body>
+</html>
