@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式--九宫格</title>
+    <style>
+        .blockDiv {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .block {
+            width: calc(calc(100% / 3 ) - 10px);
+            margin: 5px;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            /* 内容居中 */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            /* flex布局时，子元素设置vertical-align、float等无效 */
+            /* vertical-align: middle; */
+        }
+    </style>
+</head>
+<body>
+    <div class="blockDiv">
+        <div class="block">1</div>
+        <div class="block">2</div>
+        <div class="block">3</div>
+        <div class="block">4</div>
+        <div class="block">5</div>
+        <div class="block">6</div>
+        <div class="block">7</div>
+        <div class="block">8</div>
+        <div class="block">9</div>
+    </div>
+</body>
+</html>
