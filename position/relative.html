@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+    <style>
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: white;
+        }
+
+#two {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background: blue;
+}
+    </style>
+</head>
+<body>
+    <div class="box" id="one">One</div>
+    <div class="box" id="two">Two</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+    <ol>
+        <li>相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移。</li>
+        <li>未应用定位的其它元素是按照 "Two" 在正常位置的情况下进行布局的</li>
+    </ol>
+</body>
+</html>
